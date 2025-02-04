@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunnies Index</title>
+  </head>
+  <body>
+    <h1>All Bunnies</h1>
+    <ul>
+        <% bunnies.forEach(bunny => {%>
+           <li> <a href="bunnies/<%= bunny._id %>"><%= bunny.name %></a></li>
+        <%}); %>
+    </ul>
+    <a href="/bunnies/new">Add a new bun!</a>
+  </body>
+</html>

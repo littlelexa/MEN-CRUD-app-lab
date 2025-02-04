@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= bunny.name %></title>
+</head>
+<body>
+    <h1>Edit <%= bunny.name %></h1>
+    <form action="/bunnies/<%= bunny._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= bunny.name %>"/>
+    
+        <label for="isDwarf">Is the rabbit a dwarf breed?</label>
+        <input type="checkbox" name="isDwarf" id="isDwarf" <% if(bunny.isDwarf){%>checked<%}%> />
+    
+        <label for="isGiant">Is the rabbit a giant breed?</label>
+        <input type="checkbox" name="isGiant" id="isGiant" <% if(bunny.isGiant){%>checked<%}%> />
+    
+        <label for="isLop">Is the rabbit a lop breed?</label>
+        <input type="checkbox" name="isLop" id="isLop" <% if(bunny.isLop){%>checked<%}%> />
+                
+        <button type="submit">Update Bun</button>
+    </form>
+    <a href="/bunnies">Back to Buns</a>
+
+      
+</body>
+</html>

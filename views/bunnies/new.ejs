@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add a Bun</title>
+  </head>
+  <body>
+    <h1>Add a New Bun!</h1>
+    <form action="/bunnies" method="POST">
+    <label for="name">Your Rabbit's Name:</label>
+    <input type="text" name="name" id="name" />
+    
+    <label for="isDwarf">Is the rabbit a dwarf breed?</label>
+    <input type="checkbox" name="isDwarf" id="isDwarf" />
+
+    <label for="isGiant">Is the rabbit a giant breed?</label>
+    <input type="checkbox" name="isGiant" id="isGiant" />
+
+    <label for="isLop">Is the rabbit a lop breed?</label>
+    <input type="checkbox" name="isLop" id="isLop" />
+    
+    <button type="submit">Add Bun</button>
+    <a href="/bunnies">Back to the buns!</a>
+  </body>
+</html>
